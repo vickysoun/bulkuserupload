@@ -5,7 +5,7 @@ define(['jquery'], function ($) {
                 e.preventDefault();
                 
                 var cir_id = $('input[name="cir_id"]').val();
-                // alert(cir_id);
+                
                 $.ajax({
                     type: "POST",
                     url: M.cfg.wwwroot + '/local/bulkuserupload/ajax.php',
