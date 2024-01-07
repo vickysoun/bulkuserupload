@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<XMLDB PATH="local/bulkuserupload/db" VERSION="2024010400" COMMENT="XMLDB file for DB of Moodle local/bulkuserupload" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+
+  <TABLES>
+
+    <TABLE NAME="bulkuserupload_userdetails" COMMENT="Details of Users uploaded through CSV by local_bulkuserupload plugin">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="firstname" TYPE="char" LENGTH="50" NOTNULL="true" COMMENT="Firstname of user"/>
+        <FIELD NAME="lastname" TYPE="char" LENGTH="50" NOTNULL="true" COMMENT="Lastname of user"/>
+        <FIELD NAME="email" TYPE="char"  LENGTH="100" NOTNULL="true" COMMENT="Email of user"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Timestamp when the user is created"/>
+        <FIELD NAME="mailsent" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" COMMENT="Timestamp when mail is actually sent"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    
+  </TABLES>
+  
+</XMLDB>
